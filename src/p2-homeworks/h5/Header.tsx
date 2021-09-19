@@ -4,7 +4,7 @@ import s from "./Header.module.css"
 
 function Header() {
     return (
-        <div className={s.slideContainer}>
+        <div className={s.slideContainer}>//lal
             <div className={s.slide}>
                 <div className={s.slideContent}>
                     <NavLink to={"/pre-junior"}>Pre Junior</NavLink>
