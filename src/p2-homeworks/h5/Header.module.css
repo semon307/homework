@@ -1,0 +1,57 @@
+.slideContainer {
+    left: 0;
+    position: relative;
+    top: 0px;
+    height: 90px;
+}
+.slideContainer .slide {
+    background-color: white;
+    border: solid white;
+    border-width: 2px 2px 2px 0;
+    color: #fff;
+    height: 48px;
+    line-height: 48px;
+    margin: 16px 0 0 -220px;
+    position: relative;
+    text-align: center;
+    width: 250px;
+    -moz-transition: margin 1s;
+    -o-transition: margin 1s;
+    -webkit-transition: margin 1s;
+    transition: margin 1s;
+}
+
+.slideContainer .slide:hover {
+    margin-left: 0;
+}
+
+.slideContainer .slide .slideContent {
+    float: left;
+    width: 500px;
+    margin: -10px 20px 20px -140px;
+}
+
+.slideContainer .slide .slideHeader {
+    float: left;
+    width: 30px;
+    -moz-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    -webkit-transition: opacity 1s;
+    transition: opacity 1s;
+}
+
+.slideContainer .slide:hover .slideHeader {
+    opacity: 0;
+}
+.slideContent a {
+    padding: 5px;
+    color: #6aff2f;
+}
+.button {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #6aff2f;
+    background-color: #6aff2f;
+    position: absolute;
+    margin: 10px;
+}
