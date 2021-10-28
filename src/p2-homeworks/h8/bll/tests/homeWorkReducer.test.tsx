@@ -15,18 +15,25 @@ beforeEach(() => {
 })
 
 test('sort name up', () => {
-    const newState = homeWorkReducer(initialState, {type: 'sort', payload: 'up'})
+    const newState = homeWorkReducer(initialState, {type: 'SORT-UP'})
+    expect(newState[0].name[0].toUpperCase() <= newState[1].name[0].toUpperCase()).toBe(true)
+    expect(newState[1].name[0].toUpperCase() <= newState[2].name[0].toUpperCase()).toBe(true)
+    expect(newState[2].name[0].toUpperCase() >= newState[3].name[0].toUpperCase()).toBe(false)
 
     console.log(newState)
     // expect(...).toBe(...)
 })
 test('sort name down', () => {
-    const newState = homeWorkReducer(initialState, {type: 'sort', payload: 'down'})
-
+    const newState = homeWorkReducer(initialState, {type: 'SORT-DOWN'})
+    expect(newState[0].name[0].toUpperCase() >= newState[1].name[0].toUpperCase()).toBe(true)
+    expect(newState[1].name[0].toUpperCase() >= newState[2].name[0].toUpperCase()).toBe(true)
+    expect(newState[2].name[0].toUpperCase() <= newState[3].name[0].toUpperCase()).toBe(false)
 
 })
 test('check age 18', () => {
-    const newState = homeWorkReducer(initialState, {type: 'check', payload: 18})
+    const newState = homeWorkReducer(initialState, {type: 'CHECK-AGE', payload: 18})
 
+    expect(newState[0].age > 18).toBe(true)
+    expect(newState[1].age <= 18).toBe(false)
 
 })

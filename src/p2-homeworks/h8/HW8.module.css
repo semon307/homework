@@ -1,0 +1,18 @@
+.main {
+
+}
+.peopleData {
+    height: 10px;
+    width: 200px;
+    padding: 15px;
+    display: inline-block;
+
+
+}
+.name{
+float: left;
+}
+.age {
+float: right;
+
+}
